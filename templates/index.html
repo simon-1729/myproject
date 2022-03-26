@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>API Status</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link href='/static/styles/main.css' rel='stylesheet' />
+</head>
+<body>
+  <div class="api">
+    <h1>API Gateway</h1>
+      <div>
+        <div class="status-bar">Server status: <div class="status">{{status_code}}</div>
+         <div class="results">
+            <button id="buttonId" class="button">Show payload</button>
+             <div id="payload" class="hidden">
+              <ul>
+              {% for entry in contents %}
+              <li>{{ entry }}</li>
+              {% endfor %}
+           </ul>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+  <script src='/static/src/app.js'></script>
+</body>
+</html>
