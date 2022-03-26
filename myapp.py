@@ -7,12 +7,20 @@ url = "http://localhost:8888/apples/byWeight"
 
 @app.route('/api', methods=['GET'])
 def api_status():
-    my_request = requests.get(url)
-    my_status_code = my_request.status_code
-    decoded_contents = my_request.content.decode('UTF-8')
-    json_contents = json.loads(decoded_contents)   
+    try:
+        my_request = requests.get(url)
+        my_status_code = my_request.status_code    
+        
+        if my_status_code == 200:
+            decoded_contents = my_request.content.decode('UTF-8')
+            json_contents = json.loads(decoded_contents)
+    except Exception:
+        my_status_code = '500'
+        json_contents = ''
+        print('Exception occured!')
     return render_template("index.html", status_code=my_status_code,
         contents=json_contents)
+        
 
 @app.route('/docs', methods=['GET'])
 def api_docs():
