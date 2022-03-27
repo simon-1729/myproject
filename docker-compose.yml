@@ -1,6 +1,6 @@
 version: "3"
 services:
-  productservice:
+  modernjava:
     image: simon1729/modernjava2
     container_name: modernjava
     environment:
@@ -11,11 +11,11 @@ services:
       - esdata2:/usr/share/productservice/data
   web:
     build: .
-    command: python myapp.py
+    command: python3 myapp.py
     environment:
         - DEBUG=True # set an env var for flask
     depends_on:
-      - productservice
+      - modernjava
     ports:
       - 5001:5001
     volumes:
@@ -23,3 +23,4 @@ services:
 volumes:
     esdata2:
       driver: local
+      

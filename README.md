@@ -6,7 +6,21 @@
 > venv\Scripts\activate
 ```
 
-### Start service and go to [link](http://172.20.10.2:5001/api)
+### Start service and go to [link](http://localhost:5001/api)
 ```
 > python myapp.py
+```
+#### (Optional) Build and tag a Docker image
+```bash
+docker build -t simon1729/myflaskapp .
+```
+
+#### (Optional) Start Docker container.
+```bash
+docker run -d -p 5001:5001 --name myflaskapp simon1729/myflaskapp
+```
+
+#### (Optional) Alternatively, spin up all containers with Docker-Compose.
+```bash
+docker-compose up -d
 ```

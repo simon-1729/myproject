@@ -3,7 +3,7 @@ import json, os, requests
 
 app = Flask(__name__)
 
-url = "http://localhost:8888/apples/byWeight"
+url = "http://modernjava:8888/apples/byWeight"
 
 @app.route('/api', methods=['GET'])
 def api_status():
@@ -27,4 +27,4 @@ def api_docs():
     return render_template("docs.html")
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5001)))
+   app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5001)))
