@@ -17,7 +17,7 @@ def api_status():
     except Exception:
         my_status_code = '500'
         json_contents = ''
-        print('Exception occured!')
+        app.logger.error('Exception occured!')
     return render_template("index.html", status_code=my_status_code,
         contents=json_contents)
         
