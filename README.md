@@ -1,7 +1,7 @@
 # API Service Gateway
 
 #### Details
-This is a first draft of an API Service Gateway for a system of microservices. As such it has a dependency on the [ModernJava app](https://github.com/CodePeeler/modernjava.git). The url may be configured in the myapp.py. However, the recommended usecase is to avail of Docker Compose and spin-up all dependencies.
+This is a first draft of an API Service Gateway for a system of microservices. As such it has a dependency on the [ModernJava](https://github.com/CodePeeler/modernjava.git) backend microservice. The url for the backend service may be configured in the myapp.py file. The recommended usecase is to avail of Docker Compose and spin-up both the gateway and the backend service.
 
 ##### Setup (virtual environment and install dependencies)
 ```bash
