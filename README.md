@@ -20,7 +20,8 @@ This is a first draft of an API service Gateway for system of microservices. As 
 ___
 
 
-##### (Optional) Build and tag a Docker image
+#### Optional 
+##### Build and tag a Docker image
 ```bash
 docker build -t simon1729/myflaskapp .
 ```
@@ -33,11 +34,11 @@ docker run -d -p 5001:5001 --name myflaskapp simon1729/myflaskapp
 ___
 
 
-##### (Optional) Alternatively, spin up all containers with Docker-Compose.
+#### Optional
+##### Alternatively, spin up all containers with Docker-Compose.
 ```bash
 docker-compose up -d
 ```
 
-##### The API gateway is available at [link](http://localhost:5001/api).
-##### And the back end service is available at [link](http://localhost:8888/swagger-ui.html#/).
+##### The API gateway is available [here](http://localhost:5001/api) and the back end service is available [here](http://localhost:8888/swagger-ui.html#/).
 
