@@ -9,7 +9,7 @@ This is a first draft of an API Service Gateway for a system of microservices. A
 > cd myproject
 > python -m venv .\flask-app\venv
 > cd flask-app
-> .\venv\Scripts\activate\venv
+> .\venv\Scripts\activate
 > pip install -r requirements.txt
 ```
 
