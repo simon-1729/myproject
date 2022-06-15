@@ -1,3 +1,3 @@
 # Documentation
 
-*  [Diagram](./System_Architecture_Overview.pdf) High level macroscopic logical view of a System composed of microservice.
+*  [Diagram](./System_Architecture_Overview.pdf) - high level macroscopic logical view of the microservice.
